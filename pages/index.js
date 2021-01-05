@@ -50,7 +50,7 @@ export default function Home() {
 
           <a href="https://musicfansmvp.vercel.app/" className="card">
             <h3>Music fans &rarr;</h3>
-            <p>MVP de um projeto em desenvolvimento, feito com React.</p>
+            <p>MVP de um projeto em desenvolvimento, feito com React + GraphQL.</p>
           </a>
 
           <a
