@@ -1,7 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
+library.add(fab);
 
 export default function Home() {
   return (
@@ -15,6 +18,12 @@ export default function Home() {
         <h1 className="title">Bem vindo ao meu site!</h1>
 
         <Image src="/me.webp" alt="it's me, Igor!" width={200} height={200} />
+        
+        <div className="social">
+        <a href="https://github.com/Igorbrands" target="_blank"><FontAwesomeIcon icon={["fab", "github"]} style={{width:'40px'}} /></a>
+        <a href="https://www.linkedin.com/in/igor-cantelmo-dev/" target="_blank"><FontAwesomeIcon icon={["fab", "linkedin"]} style={{width:'40px'}} /></a>
+        <a href="https://codepen.io/igorbrands" target="_blank"><FontAwesomeIcon icon={["fab", "codepen"]} style={{width:'40px'}} /></a>
+        </div>
 
         <p className="description">
           Um simples site onde posso mostrar um pouquinho dos meus estudos e
@@ -61,15 +70,15 @@ export default function Home() {
           <li></li>
           <li></li>
         </ul>
+        
       </main>
-
       <footer>
         <a
           href="https://github.com/Igorbrands"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Em construção por Igorbrands
+          Em construção por Igor Cantelmo
         </a>
       </footer>
 
@@ -81,6 +90,19 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+        .social{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+        .social a{
+          padding: 0.5vw;
+          transition: .5s;
+        }
+        .social a:hover{
+          color: #010101;
         }
 
         main {
@@ -117,7 +139,7 @@ export default function Home() {
         }
 
         .title a {
-          color: #0070f3;
+          color: #f79fc0;
           text-decoration: none;
         }
 
@@ -177,8 +199,8 @@ export default function Home() {
         .card:hover,
         .card:focus,
         .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          color: #f79fc0;
+          border-color: #f79fc0;
         }
 
         .card h3 {
